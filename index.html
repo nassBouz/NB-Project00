@@ -11,10 +11,18 @@
   <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
   <link rel="stylesheet" href="styles/style.css">
   <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-
 </head>
 
 <body>
+
+  <!------------navBar------------------ -->
+  <div class="myNav" id="myTopnav">
+    <a href="#about">ABOUT</a></li>
+    <a href="#portfolio">PORTFOLIO</a></li>
+    <a href="#quotes">QUOTES</a></li>
+    <a href="#contact">CONTACT</a></li>
+    <a href="javascript:void(0);" class="hamburger" ><i class="fa fa-bars" onclick="myFunction()"></i></a>
+  </div>
   <!-- -------------header-------------- -->
   <header>
     <div class="mypic1">
@@ -31,20 +39,12 @@
 
     </div>
   </header>
-<!-- -----------------navbar ---------- -->
-  <nav class="myNav">
-    <a class="hamburger" href=""><i class="fa fa-bars"></i></a>
-    <ul>
-      <li id = "ab1"><a href="#about">About</a></li>
-      <li><a href="#profolio">PROTFOLIO</a></li>
-      <li><a href="#quotes">QUOTES</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
 <!-- --------------about------------------ -->
   <section id="about">
-      <h2>About</h2>
-      <div class="grid-wrapper articles">
+      <div class="myAbout">
+        <h2>About me </h2>
+      </div>
+      <div class="grid-wrapper">
         <p class="col-half">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -60,59 +60,33 @@
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
   </section>
-<!-- ---------------profolio---------------- -->
-   <section id = "tesemonials">
-    <div id="rotate_container">
-      <div id="item1">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
 
-      <div id="item2">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-    </div>
-  </section>
-  <!-- Slideshow container -->
-  <section class="caro">
+  <!-- ---------------profolio---------------- -->
+  <section id="portfolio">
     <div class="slideshow-container">
       <h2>Projects</h2>
       <hr>
-    <!-- Full-width images with number and caption text -->
-    <div class="mySlides fade">
-      <div class="numbertext">1 / 3</div>
-      <img src="images/moto.jpg">
-      <div class="text">Caption Text</div>
-    </div>
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <a href="#img1"><img src="images/monument.jpg">
+        <a href="#_" class="lightbox" id="img1"><img src="images/monument.jpg"></a>
+        <div class="text">Monument Project</div>
+      </div>
 
-    <div class="mySlides fade">
-      <div class="numbertext">2 / 3</div>
-      <img src="images/picProfile.jpg">
-      <div class="text">Caption Two</div>
-    </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <a href="#img2"><img src="images/quaks.jpg">
+        <a href="#_" class="lightbox" id="img2"><img src="images/quaks.jpg"></a>
+        <div class="text">Earthquakes API project</div>
+      </div>
 
-    <div class="mySlides ">
-      <div class="numbertext">3 / 3</div>
-      <img src="images/IMG_0003.jpg" >
-      <div class="text">Caption Three</div>
-    </div>
-
-    <!-- Next and previous buttons -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <a href="#img3"><img src="images/clothing.jpg" >
+        <a href="#_" class="lightbox" id="img3"><img src="images/clothing.jpg"></a>
+        <div class="text">Painted Bird</div>
+      </div>
   </div>
-  <br>
-
-  <!-- The dots/circles -->
 
   <div style="text-align:center">
     <span class="dot" onclick="currentSlide(1)"></span>
@@ -126,31 +100,41 @@
     <div class="grid-wrapper articles">
        <h1 class="col-half" id="myQuotes">Quotes</h1>
        <div class="col-half">
-          <P>"In the depth of winter, I finally learned that within me there lay an invincible summer.
+        <div class="blockquote">
+          <P >"In the depth of winter, I finally learned that within me there lay an invincible summer.
           The only way to deal with an unfree world is to become so absolutely free that your very existence is an act of rebellion.
           Men must live and create. Live to the point of tears."</p>
           <p id="authorId">Albert Camus</p>
-          <p>"consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</P>
+        </div>
+        <div class="blockquote">
+          <p >“Don’t walk in front of me… I may not follow
+           Don’t walk behind me… I may not lead Walk beside me… just be my friend”</P>
           <p id="authorId">Albert Camus</p>
+        </div>
        </div>
     </div>
   </section>
-  <!-- ---------contact------------------ -->
+  <!-- ----------------------contact------------------ -->
   <section id="contact">
-   <!--  <div class="wrap"> -->
-    <h2>Get in Touch</h2>
-      <form class="contact">
-        <!-- class =".col-md-6"  -->
-        <input type="text" placeholder="Name" >
-        <input type="email" placeholder="Email Address" >
-        <input type="text" placeholder="Phone number" >
-        <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+   <div class="container">
+    <form action="/action_page.php">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name..">
+
+      <label for="email">Email address</label>
+      <input type="email" id="email" name="email" placeholder="Your email address..">
+
+       <label for="phone">Phone Number</label>
+       <input type="phone" id="phone" name="phone" placeholder="Phone Number..">
+
+      <label for="subject">Message</label>
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
   </section>
+  <!-- ---------------------footer -------------- -->
   <footer>
     <div class="wrap">
       <div class="social-links">
@@ -158,8 +142,6 @@
         <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
         <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
       </div>
-      <input type="text" placeholder="Email Address">
-      <button type="submit">Subscribe</button>
     </div>
 
     <p class="copyright">&copy;2019 Nassima Bouziane</p>

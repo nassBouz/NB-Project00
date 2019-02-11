@@ -3,30 +3,35 @@
  $(document).ready(function() {
   console.log("i am inside");
 
-  $(".myNav").on('click',function(){
-    console.log("hhhhh");
-    $('#ab1').attr("text-decoration", "underline");
-  });
-// $('#myQuotes').fadeToggle(3000);
-//   var speed= 1000,
-num = 1,
-timer = setInterval(rotate, 5000); //15 seconds as requested
-console.log('i ma in rotator');
-function rotate() {
-  console.log("i am in function rotator");
-    var container_footer = $("#rotate_container");
-    var divs_footer = container_footer.children();
-    var divs_footer_length = divs_footer.length;
-    $("#item"+num).fadeOut(speed);
-    num>divs_footer_length  ? num=0 : num++;
-    $("#item"+num).fadeIn(speed);
-    timer = setTimeout(rotate, 5000);
-};
+  // $(".myNav").on('click',function(){
+  //   console.log("hhhhh");
+  //   $('#ab1').attr("text-decoration", "underline");
+  // });
 
-    })
-//   function plusSlides(n) {
-//   showSlides(slideIndex += n);
-// }
+ function nextQuote() {
+    var quotes = $('.blockquote');
+    var quoteIndex = -1;
+    function showNextQuote() {
+        ++quoteIndex;
+        quotes.eq(quoteIndex % quotes.length).fadeIn(2000).delay(2000).fadeOut(2000, showNextQuote);
+    }
+    showNextQuote();
+}
+
+nextQuote();
+
+
+   $("div").mouseenter(function(){
+     var id = $(this).attr('section');
+     $('a').removeClass('active');
+     $("[href=#"+id+"]").addClass('active');
+   })
+
+
+
+})
+
+///////////////// carousel
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -57,5 +62,15 @@ function showSlides(n) {
 
 
 // ----------------
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "myNav") {
+    x.className += " responsive";
+  } else {
+    x.className = "myNav";
+  }
+}
+
+// ////
 
 
