@@ -11,7 +11,7 @@ html {
 
 .mypic1{
 /*  background-image:url("/Users/nassimabouziane/wdi/sf-wdi-51-assignments/nBProject0/images/thomas-kinto-1217492-unsplash.jpg");
-*/  background-image:url("sf-wdi-51-assignments/nBProject0/images/backg2.jpg");
+*/  background-image:url("/images/backg2.jpg");
   background-color: white;
   height: 500px;
   background-position: center;
