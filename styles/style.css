@@ -4,13 +4,20 @@ Base Styles
 * {
   box-sizing: border-box;
 }
-
+body {
+  font-family: 'Raleway', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  letter-spacing: .02em;
+  text-align: center;
+  color: #44545E;
+  background-color: none;
+}
 html {
   font-size: 15px;
 }
-
+/*--------profile picture-------------------*/
 .mypic1{
-/*  background-image:url("/Users/nassimabouziane/wdi/sf-wdi-51-assignments/nBProject0/images/thomas-kinto-1217492-unsplash.jpg"); */
   background-image: url("../images/backg2.jpg");
   background-color: white;
   height: 500px;
@@ -21,10 +28,6 @@ html {
   opacity: 0.73;
   color: white;
 }
-/*#myQuotes{
-  font-family: 'Handlee', cursive;
-  font-size: 25px;
-}*/
 .articles{
  height: 500px;
  padding: 50px;
@@ -32,16 +35,6 @@ html {
 #quotes p {
   font-family: 'Merienda', cursive;
   font-size: 18px;
-}
-body {
-  font-family: 'Raleway', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  /*background-color: yellow;*/
-  margin: 0;
-  letter-spacing: .02em;
-  text-align: center;
-  color: #44545E;
-  background-color: none;
 }
 hr {
   display: block;
@@ -55,14 +48,6 @@ hr {
   color: #44545E;
 }
 
-
-/*#myQuotes{
-  color: darkblue;
-  display: flex;
-  align-items:center;
-  justify-content: center;
-}*/
-/* Responsive images */
 .pic1 {
   margin-top: 100px;
   max-width: 100%;
@@ -73,7 +58,6 @@ hr {
 
 }
 .pic1:hover{
-/*   transform:rotate(0deg);*/
  transform:rotate(10deg);
  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
@@ -91,52 +75,22 @@ hr {
   margin: 50px;
   padding: 30px;
 }
-/*nav {
+
+/*//////////////////////////////////myNavvvvvvvvvvvvv////////////////*/
+
+.myNav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background-color:#3f51b5 ;
   z-index: 100;
-}*/
-
-/*.w3-theme-d1 {color:#fff !important; background-color:#f32617 !important}*/
-/*.wrap {
-  max-width: 1000px;
-  width: 100%;
-  margin: 0 auto;
-}*/
-/*nav li {
-  display: inline-block;
-}
-
-nav a {
-  font-weight: 600;
-  letter-spacing: 0.75px;
-  letter-spacing: .05rem;
-  padding: 3px 60px;
-  padding: .2rem 4rem;
-  display: inline-block;
-  border-bottom: none;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: bold;
-  color:#fff ;
-
-}*/
-/*//////////////////////////////////myNavvvvvvvvvvvvv////////////////*/
-
-.myNav {
-  overflow: hidden;
   background-color: #f32617 ;
-  /*color:#fff !important; background-color:#f32617 */
 }
 
 .myNav a {
   float: left;
   display: block;
   color:#fff;
-/*  color: #f2f2f2;*/
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -157,17 +111,24 @@ nav a {
   display: none;
 }
 /*////////////////////////// fin nav /////////////////////*/
-h1,h2,h3{
+h2{
   text-transform: uppercase;
+  color:#f32617  ;
 }
 #authorId{
   text-align: right;
   color: #f32617  ;
-  font-size: 10px;
 }
 footer{
    background-color:#f32617;
   color:#fff ;
+}
+p{
+  text-align: justify;
+}
+.social-links{
+  size:14px;
+  rotate : rotateY(30deg);
 }
 /* ----------------------------------------
 Forms
@@ -181,6 +142,9 @@ input[type=text], input[type=email], input[type=phone],select, textarea {
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
+  border-top: none;
+  border-left:none;
+  border-top: none;
 }
 label{
 float: left;
@@ -201,7 +165,9 @@ input[type=submit]:hover {
 .container {
   border-radius: 5px;
   background-color: #f2f2f2;
-  padding: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 100px;
 }
 
 
@@ -210,7 +176,7 @@ input[type=submit]:hover {
   padding-top: 60px;
   margin: 100px;
 }
-/* 000000Slideshow container */
+/* -----------Slideshow container---------- */
 .slideshow-container {
   max-width: 1000px;
   max-height: 500px;
@@ -222,7 +188,7 @@ input[type=submit]:hover {
   overflow: hidden;
 }
 
-/* 00000Hide the images by default */
+/* ---------Hide the images by default---------- */
 .mySlides {
   display: none;
   width: 100%;
@@ -235,19 +201,15 @@ input[type=submit]:hover {
   border: 2px solid #ddd;
 }
 
-
-/* 000000Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* 00000On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
 
-/* 0000Caption text */
 .text {
   color: black;
   font-size: 15px;
@@ -258,7 +220,7 @@ input[type=submit]:hover {
   text-align: center;
 }
 
-/*0000 Number text (1/3 etc) */
+/*---------------Number text (1/3 etc) ------*/
 .numbertext {
   color: #f2f2f2;
   font-size: 12px;
@@ -267,7 +229,7 @@ input[type=submit]:hover {
   top: 0;
 }
 
-/* 00000The dots/bullets/indicators */
+/* --------------The dots/bullets/indicators */
 .dot {
   cursor: pointer;
   height: 15px;
@@ -300,6 +262,10 @@ input[type=submit]:hover {
   from {opacity: .4}
   to {opacity: 1}
 }
+a.activeMenuItem {
+    background-color: black;
+    font-weight: bold;
+}
 /*-----==========    lightBox  =======-----------*/
 
 /** LIGHTBOX MARKUP **/
@@ -307,7 +273,6 @@ input[type=submit]:hover {
 .lightbox {
   /** Default lightbox to hidden */
   display: none;
-
   /** Position and style */
   position: fixed;
   z-index: 999;
@@ -329,12 +294,11 @@ input[type=submit]:hover {
 .lightbox:target {
   /** Remove default browser outline */
   outline: none;
-
   /** Unhide lightbox **/
   display: block;
 }
 
-
+/*---- ----------- media query -----------*/
 @media only screen and (max-width: 550px) {
 
   .grid-wrapper  {
@@ -353,15 +317,18 @@ input[type=submit]:hover {
 .blockquote p{
   font-size: 12px;
 }
-/*---- nav-----*/
+
 @media screen and (max-width: 600px) {
   .myNav a {
-   /* .myNav a:not(:first-child) {*/
     display: none;
   }
   .myNav a.hamburger {
     float: right;
     display: block;
+  }
+  .container{
+    margin: 10px;
+    margin-bottom: 30px;
   }
 }
 @media screen and (max-width: 600px) {

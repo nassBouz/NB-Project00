@@ -1,12 +1,7 @@
-  console.log("i am outside");
+
 
  $(document).ready(function() {
   console.log("i am inside");
-
-  // $(".myNav").on('click',function(){
-  //   console.log("hhhhh");
-  //   $('#ab1').attr("text-decoration", "underline");
-  // });
 
  function nextQuote() {
     var quotes = $('.blockquote');
@@ -17,18 +12,7 @@
     }
     showNextQuote();
 }
-
 nextQuote();
-
-
-   $("div").mouseenter(function(){
-     var id = $(this).attr('section');
-     $('a').removeClass('active');
-     $("[href=#"+id+"]").addClass('active');
-   })
-
-
-
 })
 
 ///////////////// carousel
@@ -61,7 +45,7 @@ function showSlides(n) {
 
 
 
-// ----------------
+// ---------------- myNav-----------------------
 function myFunction() {
   var x = document.getElementById("myTopnav");
   if (x.className === "myNav") {
@@ -70,7 +54,4 @@ function myFunction() {
     x.className = "myNav";
   }
 }
-
-// ////
-
 
